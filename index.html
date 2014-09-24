@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Loan Calculator</title>
+       
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8"> 
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    
+    <table>
+    	<tr><th>Enter Loan Data:</th> 
+    		<td></td> 
+    		<th>Loan Balance, Cumulative Equity, and Interest Payments</th> 
+    	</tr> 
+    	<tr><td>Amount of the loan ($): </td> 
+    		<td rowspan=8> 
+    			<canvas id="graph" width="400" height="250"> 
+    			</canvas> 
+    		</td>
+    	</tr> 
+    	<tr><td> Annual interest (%):</td> 
+    		<td><input id="apr" onchange="calculate();"> 
+    		</td>
+    	</tr> 
+    	<tr>
+    		<td>Repayment period (years):</td> 
+    		<td><input id="years" onchange="calculate();"></td>
+    		<tr><td>Zipcode (to find lenders):</td> 
+    			<td><input id="zipcode" onchange="calculate();">
+    			</td>
+    			<tr><th>Approximate Payments:</th> 
+    				<td><button onclick="calculate();">Calculate</button>
+    				</td>
+    			</tr>
+    			<tr><td>Monthly payment:</td>
+    				<td>$<span class="output" id="payment"></span></td></tr> 
+    				<tr><td>Monthly payment:</td> 
+    					<td>$<span class="output" id="payment"></span>
+    					</td>
+    				</tr> 
+    				<tr><td>Total payment:</td> 
+    					<td>$<span class="output" id="total"></span></td>
+    				</tr> 
+    				<tr><td>Total interest:</td> 
+    					<td>$<span class="output" id="totalinterest"></span>
+    					</td>
+    				</tr>
+					<tr>
+						<th>Sponsors:</th>
+						<td colspan=2> 
+							Apply for your loan with one of these fine leners: 
+						<div id="lenders"></div></td>
+					</tr> 
+				</table> 
+
+
+    </table>
+
+    <script type="text/javascript" src="script.js"></script> 
+ 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script>
+
+</script> 
+    
+    </body>
+</html>
